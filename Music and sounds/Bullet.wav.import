@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bullet.wav-add2d704eba3f731f4d6408b1888254a.sample"
+
+[deps]
+
+source_file="res://Music and sounds/Bullet.wav"
+dest_files=[ "res://.import/Bullet.wav-add2d704eba3f731f4d6408b1888254a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

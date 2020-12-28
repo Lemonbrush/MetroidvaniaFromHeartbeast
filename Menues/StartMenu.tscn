@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Menues/StartMenu.gd" type="Script" id=1]
+[ext_resource path="res://UI/DefaultTheme.tres" type="Theme" id=2]
+
+[node name="StartMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = -0.000386524
+anchor_top = 0.0013788
+anchor_right = 0.999613
+anchor_bottom = 1.00138
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 132.0
+margin_top = 62.0
+margin_right = 188.0
+margin_bottom = 118.0
+custom_constants/separation = 4
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_right = 56.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 56, 16 )
+text = "New Game"
+
+[node name="LoadButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 56.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 56, 16 )
+text = "Load Game"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 56.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 56, 16 )
+text = "Quit"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/LoadButton" to="." method="_on_LoadButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
