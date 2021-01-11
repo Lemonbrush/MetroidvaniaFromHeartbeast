@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://World/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://World/UpDown.tres" type="Curve2D" id=6]
 [ext_resource path="res://World/Camera.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Flying Enemy.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -138,6 +139,9 @@ position = Vector2( 208, 176 )
 collision_mask = 0
 
 [node name="UI" parent="." instance=ExtResource( 8 )]
+
+[node name="Flying Enemy" parent="." instance=ExtResource( 9 )]
+position = Vector2( 448, 48 )
 
 [editable path="Player"]
 
