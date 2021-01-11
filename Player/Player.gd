@@ -6,6 +6,7 @@ const JumpEffect = preload("res://Effects/JumpEffect.tscn")
 const WallDustEffect = preload("res://Effects/WallDustEffect.tscn")
 
 var PlayerStats = ResourceLoader.PlayerStats
+var MainInstances = ResourceLoader.MainInstances
 
 export (int) var ACCELERATION = 512
 export (int) var MAX_SPEED = 64
@@ -41,6 +42,10 @@ func set_invincible(value):
 	
 func _ready():
 	PlayerStats.connect("player_died", self, "_on_died")
+	MainInstances.Player = self
+
+func _exit_tree():
+	MainInstances.Player = null
 
 #called every Frame of the game
 func _physics_process(delta):
