@@ -53,6 +53,11 @@ shape = SubResource( 3 )
 [node name="Collider" parent="Hitbox" index="0"]
 shape = SubResource( 4 )
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="6"]
+position = Vector2( 0.00836849, -2.1382 )
+scale = Vector2( 0.707722, 0.689126 )
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+
 [editable path="HurtBox"]
 
 [editable path="Hitbox"]

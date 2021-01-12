@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Effects/DustEffect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Effects/EnemyDeathEffect.gd" type="Script" id=2]
+
+[node name="EnemyDeathEffect" type="Node2D"]
+position = Vector2( 0.168224, 0.67289 )
+script = ExtResource( 2 )
+
+[node name="DustEffect2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2.19862, -4.67287 )
+
+[node name="DustEffect3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4.88296, 2.07058 )
+
+[node name="DustEffect4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5.25539, -4.50577 )
+
+[node name="DustEffect5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8.58723, 3.38013 )
+
+[node name="DustEffect6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1.69227, -9.58458 )
+
+[node name="DustEffect7" parent="." instance=ExtResource( 1 )]
+position = Vector2( -7.71544, -3.52071 )
+
+[node name="DustEffect8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2.71751, 4.70106 )
+
+[node name="DustEffect9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1.67056, -0.933201 )
+[connection signal="tree_exited" from="DustEffect9" to="." method="_on_DustEffect9_tree_exited"]

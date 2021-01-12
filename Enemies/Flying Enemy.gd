@@ -6,6 +6,9 @@ var MainInstances = ResourceLoader.MainInstances
 
 onready var sprite = $Sprite
 
+func _ready():
+	set_physics_process(false)
+
 func _physics_process(delta):
 	var player = MainInstances.Player
 	
@@ -18,3 +21,7 @@ func chase_player(player, delta):
 	motion = motion.clamped(MAX_SPEED) #remein speed under enemy's maximum 
 	sprite.flip_h = global_position < player.global_position #Enemy looks in player's direction
 	motion = move_and_slide(motion) #actual move
+
+
+func _on_VisibilityNotifier2D_screen_entered():
+	set_physics_process(true) #begin acting when this enters the screen
